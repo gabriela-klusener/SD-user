@@ -7,6 +7,7 @@ import com.uelisson.cartoesService.entities.AdminModel;
 import com.uelisson.cartoesService.entities.AlunoModel;
 import com.uelisson.cartoesService.entities.ProfessorModel;
 import com.uelisson.cartoesService.entities.UsuarioModel;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/usuarios")
+@Tag(
+        name = "CRUD REST APIs for Customers in Project",
+        description = "REST APIs in User to FETCH customer details"
+)
 public class UserController {
 
     private final GestaoUsuarioService gestaoUsuarioService;

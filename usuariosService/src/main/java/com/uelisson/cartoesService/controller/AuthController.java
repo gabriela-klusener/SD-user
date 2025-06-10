@@ -5,6 +5,7 @@ import com.uelisson.cartoesService.dto.AuthRequestDTO;
 import com.uelisson.cartoesService.dto.AuthResponseDTO;
 import com.uelisson.cartoesService.entities.UsuarioModel;
 import com.uelisson.cartoesService.repository.UsuarioRepository;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,10 @@ import com.uelisson.cartoesService.config.security.JwtUtil;
 
 @RestController
 @RequestMapping("api/auth")
+@Tag(
+        name = "CRUD REST APIs for Customers in Project",
+        description = "REST APIs in Auth to FETCH customer details"
+)
 public class AuthController {
 
     @Autowired
